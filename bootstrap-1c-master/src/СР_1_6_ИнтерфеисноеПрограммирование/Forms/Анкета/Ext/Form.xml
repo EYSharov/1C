@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ЖелаемаяДолжность" id="28">
+			<DataPath>ЖелаемаяДолжность</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ЖелаемаяДолжностьКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ЖелаемаяДолжностьРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<UsualGroup name="ГруппаФИО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФИОРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<InputField name="Фамилия" id="5">
+					<DataPath>Фамилия</DataPath>
+					<ContextMenu name="ФамилияКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="7"/>
+				</InputField>
+				<InputField name="Имя" id="8">
+					<DataPath>Имя</DataPath>
+					<ContextMenu name="ИмяКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="10"/>
+				</InputField>
+				<InputField name="Отчество" id="11">
+					<DataPath>Отчество</DataPath>
+					<ContextMenu name="ОтчествоКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="13"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ЛичныеДанные" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЛичныеДанныеРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<InputField name="ДатаРождения" id="16">
+					<DataPath>ДатаРождения</DataPath>
+					<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">ДатаРожденияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="Возраст" id="19">
+					<DataPath>Возраст</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ВозрастКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ВозрастРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<CheckBoxField name="НаличиеДетей" id="22">
+					<DataPath>НаличиеДетей</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НаличиеДетейКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НаличиеДетейРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">НаличиеДетейПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="КоличествоДетей" id="25">
+					<DataPath>КоличествоДетей</DataPath>
+					<ContextMenu name="КоличествоДетейКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="КоличествоДетейРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПерваяРабота" id="31">
+			<DataPath>ЭтоПервоеМестоРаботы</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПерваяРаботаКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ПерваяРаботаРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="OnChange">ПерваяРаботаПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<Table name="МестаРаботы" id="34">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>МестаРаботы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МестаРаботыКонтекстноеМеню" id="35"/>
+			<AutoCommandBar name="МестаРаботыКоманднаяПанель" id="36"/>
+			<ExtendedTooltip name="МестаРаботыРасширеннаяПодсказка" id="37"/>
+			<SearchStringAddition name="МестаРаботыСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>МестаРаботы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МестаРаботыСтрокаПоискаКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="МестаРаботыСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МестаРаботыСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>МестаРаботы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МестаРаботыСостояниеПросмотраКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="МестаРаботыСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МестаРаботыУправлениеПоиском" id="44">
+				<AdditionSource>
+					<Item>МестаРаботы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МестаРаботыУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="МестаРаботыУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="МестаРаботыДатаНачалаРаботы" id="47">
+					<DataPath>МестаРаботы.ДатаНачалаРаботы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МестаРаботыДатаНачалаРаботыКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="МестаРаботыДатаНачалаРаботыРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">МестаРаботыДатаНачалаРаботыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="МестаРаботыДатаОкончанияРаботы" id="50">
+					<DataPath>МестаРаботы.ДатаОкончанияРаботы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МестаРаботыДатаОкончанияРаботыКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="МестаРаботыДатаОкончанияРаботыРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">МестаРаботыДатаОкончанияРаботыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="МестаРаботыДолжность" id="53">
+					<DataPath>МестаРаботы.Должность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МестаРаботыДолжностьКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="МестаРаботыДолжностьРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="МестаРаботыМестоРаботы" id="56">
+					<DataPath>МестаРаботы.МестоРаботы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МестаРаботыМестоРаботыКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="МестаРаботыМестоРаботыРасширеннаяПодсказка" id="58"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ИнтерфейсноеПрограммирование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Фамилия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Имя" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Отчество" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаРождения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата рождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЖелаемаяДолжность" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Желаемая должность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаличиеДетей" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наличие детей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДетей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество детей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Возраст" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возраст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПервоеМестоРаботы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это первое место работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МестоРаботы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Место работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Должность" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МестаРаботы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Места работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДатаНачалаРаботы" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала работы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаОкончанияРаботы" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата окончания работы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Должность" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Должность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="МестоРаботы" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Место работы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>
